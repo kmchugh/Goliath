@@ -1,0 +1,7 @@
+nbproject/private/
+private.xml
+build/
+dist/
+private.properties
+.DS_Store
+release/
