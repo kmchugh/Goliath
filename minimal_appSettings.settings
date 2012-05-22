@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<{application.settings.root}>
+    <HashTable type="Goliath.Collections.HashTable">
+        <Item>
+            <Key type="java.lang.String">Application</Key>
+            <Value>
+                <PropertySet type="Goliath.Collections.PropertySet">
+                    <Item>
+                        <Property type="java.lang.String">issingleinstance</Property>
+                        <Value type="java.lang.String">{application.singleinstance}</Value>
+                    </Item>
+                </PropertySet>
+            </Value>
+        </Item>
+        <Item>
+            <Key type="java.lang.String">SystemTray</Key>
+            <Value>
+                <PropertySet type="Goliath.Collections.PropertySet">
+                    <Item>
+                        <Property type="java.lang.String">name</Property>
+                        <Value type="java.lang.String">{application.longName}</Value>
+                    </Item>
+                </PropertySet>
+            </Value>
+        </Item>
+    </HashTable>
+</{application.settings.root}>
