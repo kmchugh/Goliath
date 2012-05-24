@@ -128,8 +128,26 @@ public class DynamicEnum extends Goliath.Object
                         }
                         catch (InstantiationException ex)
                         {
+                            if (toClass != loSubClass)
+                            {
+                                for (Method loMethod : loSubClass.getDeclaredMethods())
+                                {
+                                    if (Modifier.isPublic(loMethod.getModifiers()) && Modifier.isStatic(loMethod.getModifiers()) && loMethod.getReturnType().equals(loSubClass) && loMethod.getParameterTypes().length == 0)
+                                    {
+                                        try
+                                        {
+                                            java.lang.Object[] loArg = null;
+                                            addDynamicEnum((K)loMethod.invoke(null, loArg));
+                                        }
+                                        catch(Exception ex1)
+                                        {
+                                            Application.getInstance().log(ex);
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        catch(Exception ex)
+                        catch(Throwable ex)
                         {
                             Application.getInstance().log(ex);
                         }

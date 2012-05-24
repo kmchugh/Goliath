@@ -477,7 +477,8 @@ public class Java
         }
 
         /**
-         * Gets the constructor with a signature that matches
+         * Gets the constructor with a signature that matches.  
+         * Passing null will look for the default constructor
          * @param taParams the signature of this constructor
          * @return the constructor specified
          */
@@ -486,6 +487,10 @@ public class Java
             if (m_oCachedConstructor == null)
             {
                 m_oCachedConstructor = new HashTable<String, Constructor>();
+            }
+            if (taParams == null)
+            {
+                taParams = new Class[0];
             }
 
             // TODO: We need to also handle contained classes here (When an instance of a class that is declared inside a class is being created)

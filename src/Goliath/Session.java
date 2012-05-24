@@ -320,8 +320,11 @@ public class Session extends Goliath.Object
     @Override
     public void pause()
     {
-        Application.getInstance().log("Pausing Session " + getSessionID(), LogType.TRACE());
-        m_oCommandManager.pause();
+        if (m_oCommandManager != null)
+        {
+            Application.getInstance().log("Pausing Session " + getSessionID(), LogType.TRACE());
+            m_oCommandManager.pause();
+        }
     }
     @Override
     public void resume()
@@ -650,6 +653,7 @@ public class Session extends Goliath.Object
      * Gets the number of milliseconds before this session will expire
      * @return the number of milliseconds until expiry
      */
+    @Override
     public long getRemainingTime()
     {
         return m_nExpiry - System.currentTimeMillis();
