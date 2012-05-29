@@ -6,7 +6,7 @@
  * 
  * Description
  * --------------------------------------------------------
- * This class is used for dynamically writing and running Java code.
+ * This class is used for dynamically writing, executing, and reflecting Java code.
  *
  * Change Log
  * --------------------------------------------------------

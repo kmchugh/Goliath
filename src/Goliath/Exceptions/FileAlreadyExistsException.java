@@ -23,9 +23,4 @@ public class FileAlreadyExistsException  extends Goliath.Exceptions.Exception
     {
         super(toFile.getAbsolutePath() + " already exists");
     }
-
-    public FileAlreadyExistsException(java.io.FileNotFoundException toEx)
-    {
-        super(toEx);
-    }
 }

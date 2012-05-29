@@ -232,6 +232,56 @@ public class MimeType extends DynamicEnum
         return g_oAudioXWav;
     }
     
+    private static MimeType g_oAudioMpeg;
+    public static MimeType AUDIO_MPEG()
+    {
+        if (g_oAudioMpeg == null)
+        {
+            g_oAudioMpeg = createEnumeration(MimeType.class, "audio/mpeg");
+        }
+        return g_oAudioMpeg;
+    }
+    
+    private static MimeType g_oAudioMP4;
+    public static MimeType AUDIO_MP4()
+    {
+        if (g_oAudioMP4 == null)
+        {
+            g_oAudioMP4 = createEnumeration(MimeType.class, "audio/mp4");
+        }
+        return g_oAudioMP4;
+    }
+    
+    private static MimeType g_oAudioOGG;
+    public static MimeType AUDIO_OGG()
+    {
+        if (g_oAudioOGG == null)
+        {
+            g_oAudioOGG = createEnumeration(MimeType.class, "audio/ogg");
+        }
+        return g_oAudioOGG;
+    }
+    
+    private static MimeType g_oAudioWEBM;
+    public static MimeType AUDIO_WEBM()
+    {
+        if (g_oAudioWEBM == null)
+        {
+            g_oAudioWEBM = createEnumeration(MimeType.class, "audio/webm");
+        }
+        return g_oAudioWEBM;
+    }
+    
+    private static MimeType g_oAudioWAV;
+    public static MimeType AUDIO_WAV()
+    {
+        if (g_oAudioWAV == null)
+        {
+            g_oAudioWAV = createEnumeration(MimeType.class, "audio/wav");
+        }
+        return g_oAudioWAV;
+    }
+    
     private static MimeType g_oImageAll;
     public static MimeType IMAGE_ALL()
     {
@@ -402,6 +452,35 @@ public class MimeType extends DynamicEnum
         return g_oVideoQuicktime;
     }
     
+    private static MimeType g_oVideoMP4;
+    public static MimeType VIDEO_MP4()
+    {
+        if (g_oVideoMP4 == null)
+        {
+            g_oVideoMP4 = createEnumeration(MimeType.class, "video/mp4");
+        }
+        return g_oVideoMP4;
+    }
+    
+    private static MimeType g_oVideoOGG;
+    public static MimeType VIDEO_OGG()
+    {
+        if (g_oVideoOGG == null)
+        {
+            g_oVideoOGG = createEnumeration(MimeType.class, "video/ogg");
+        }
+        return g_oVideoOGG;
+    }
+    
+    private static MimeType g_oVideoWEBM;
+    public static MimeType VIDEO_WEBM()
+    {
+        if (g_oVideoWEBM == null)
+        {
+            g_oVideoWEBM = createEnumeration(MimeType.class, "video/webm");
+        }
+        return g_oVideoWEBM;
+    }
     
     private static MimeType g_oALLTYPES;
     public static MimeType ALLTYPES()
